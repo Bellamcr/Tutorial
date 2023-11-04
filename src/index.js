@@ -1,15 +1,12 @@
 import "./styles.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-
 import Navbar from "./navbar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import Home from "./home";
-
 import ErrorPage from "./error-page";
-
 import Kitchen from "./kitchen";
+import Room from "./room";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -23,7 +20,12 @@ const router = createBrowserRouter([
   {
     path: "/kitchen",
     element: <Kitchen />
+  },
+  {
+    path: "/romm/:id",
+    element: <Room />
   }
+  
 ]);
 
 root.render(
